@@ -1,4 +1,6 @@
-const token = '27f4d250d324ba15d3f9e28b7d0998ef80954c8a63bdcde0'
+const token = '20c5bf406fea59ae1a9daafc4694de240c8ba7b8d7353dad'
+
+// const token = '27f4d250d324ba15d3f9e28b7d0998ef80954c8a63bdcde0'
 // if using flask token enter above and modify links below
 
 export const server_calls = {
@@ -9,8 +11,8 @@ export const server_calls = {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
                 'x-access-token': `Bearer ${token}`,
+                'Access-Control-Allow-Origin': '*',
             },
         });
 
@@ -27,8 +29,8 @@ export const server_calls = {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                'access-control-allow-origin':	'*',
                 'x-access-token': `Bearer ${token}`,
+                'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(data)
         })
@@ -46,8 +48,8 @@ export const server_calls = {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
                 'x-access-token': `Bearer ${token}`,
+                'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(data)
         })
@@ -66,6 +68,7 @@ export const server_calls = {
             headers: {
                 'Content-Type': 'application/json',
                 'x-access-token': `Bearer ${token}`,
+                'Access-Control-Allow-Origin': '*',
             }
         })
 

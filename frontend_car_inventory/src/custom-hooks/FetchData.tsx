@@ -6,34 +6,36 @@ export const useGetData = () => {
     
     // contact data is result of server call
 
-    const [profileData, setProfileData] = useState({
-      first_name:"",
-      last_name:"",
-      token:"",
-      email:"",
-      username:"",
-      });
+    // const [profileData, setProfileData] = useState({
+    //   first_name:"",
+    //   last_name:"",
+    //   token:"",
+    //   email:"",
+    //   username:"",
+    //   });
     
     
     async function handleDataFetch(){
       const result = await server_calls.get();
-      setData(result), setProfileData(result)
+      setData(result)
+      
+      // setProfileData(result)
     
   }
   
-  useEffect(() => {
-    fetch("/signup").then(
-      (res) => res.json()
-      ).then((profileData) => {
-          setProfileData({
-            first_name: profileData.first_name,
-            last_name: profileData.last_name,
-            token: profileData.token,
-            email: profileData.email,
-            username: profileData.username
-          });
-        })
-  }, []);
+  // useEffect(() => {
+  //   fetch("/signup").then(
+  //     (res) => res.json()
+  //     ).then((profileData) => {
+  //         setProfileData({
+  //           first_name: profileData.first_name,
+  //           last_name: profileData.last_name,
+  //           token: profileData.token,
+  //           email: profileData.email,
+  //           username: profileData.username
+  //         });
+  //       })
+  // }, []);
 
     // useEffect on mount
     useEffect( () => {
@@ -45,5 +47,7 @@ export const useGetData = () => {
     
     // If a specific component is identified, it will watch for changes only with that component
 
-    return { carData, getData:handleDataFetch, profileData, getProfileData:handleDataFetch }
+    return { carData, getData:handleDataFetch }
+      
+      // profileData, getProfileData:handleDataFetch }
 }
