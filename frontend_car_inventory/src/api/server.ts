@@ -1,11 +1,11 @@
-const token = '20c5bf406fea59ae1a9daafc4694de240c8ba7b8d7353dad'
+const token = '360cf990c92c385bd92cbe8b8dbabb63946a2ba799e7e429'
 
 // const token = '27f4d250d324ba15d3f9e28b7d0998ef80954c8a63bdcde0'
 // if using flask token enter above and modify links below
 
 export const server_calls = {
     get: async () => {
-        const response = await fetch(`https://lateral-quirky-piccolo.glitch.me/api/cars`,
+        const response = await fetch(`https://flaskcarinventory.onrender.com/api/cars`,
         // change url to my url once set up
         {
             method: 'GET',
@@ -24,7 +24,7 @@ export const server_calls = {
     },
 
     create: async (data: any = {}) => {
-        const response = await fetch(`https://lateral-quirky-piccolo.glitch.me/api/cars`,
+        const response = await fetch(`https://flaskcarinventory.onrender.com/api/cars`,
         {
             method: "POST",
             headers: {
@@ -43,7 +43,7 @@ export const server_calls = {
     },
 
     update: async (id:string, data: any = {}) => {
-        const response = await fetch(`https://lateral-quirky-piccolo.glitch.me/api/cars/${id}`,
+        const response = await fetch(`https://flaskcarinventory.onrender.com/api/cars/${id}`,
         {
             method: "POST",
             headers: {
@@ -62,7 +62,7 @@ export const server_calls = {
     },
 
     delete: async (id:string) => {
-        const response = await fetch(`https://lateral-quirky-piccolo.glitch.me/api/cars/${id}`,
+        const response = await fetch(`https://flaskcarinventory.onrender.com/api/cars/${id}`,
         {
             method: "DELETE",
             headers: {
