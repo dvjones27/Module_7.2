@@ -15,6 +15,10 @@ const CarInfo = (props: CarInfoProps) => {
   const store = useStore();
 
   const onSubmit = (data: any, event: any) => {
+    
+    console.log(`ID: ${typeof props.id}`);
+    console.log(props.id)
+    console.log(data)
     if (props.id && props.id.length > 0) {
       server_calls.update(props.id[0], data)
       console.log(`Updated: ${data.vin} ${props.id}`)
@@ -33,7 +37,7 @@ const CarInfo = (props: CarInfoProps) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex-wrap min-w-full min-h-full">
+      <form onSubmit={handleSubmit(onSubmit)} >
         <div>
           <label htmlFor="vin">VIN</label>
           <Input {...register('vin')} type="text" pattern="^[a-zA-Z0-9]+$" name='vin' placeholder="VIN" />
