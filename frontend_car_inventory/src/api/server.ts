@@ -2,7 +2,7 @@
 // import os
 
 // token = os.environ.get('PGSSLKEY')
-const token = '360cf990c92c385bd92cbe8b8dbabb63946a2ba799e7e429'
+const token = '27f4d250d324ba15d3f9e28b7d0998ef80954c8a63bdcde0'
 
 // const token = '27f4d250d324ba15d3f9e28b7d0998ef80954c8a63bdcde0'
 // if using flask token enter above and modify links below
@@ -15,7 +15,7 @@ export const server_calls = {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                // 'x-access-token': `Bearer ${token}`,
+                'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             },
         });
@@ -33,7 +33,7 @@ export const server_calls = {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                // 'x-access-token': `Bearer ${token}`,
+                'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(data)
@@ -52,7 +52,7 @@ export const server_calls = {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                // 'x-access-token': `Bearer ${token}`,
+                'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(data)
@@ -71,7 +71,7 @@ export const server_calls = {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
-                // 'x-access-token': `Bearer ${token}`,
+                'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             }
         })
