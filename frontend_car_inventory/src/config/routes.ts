@@ -1,7 +1,6 @@
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Dashboard from "../pages/Dashboard";
-// import Profile from "../pages/Profile";
 
 interface RouteType {
     path: string,
@@ -29,13 +28,7 @@ const routes: RouteType[] =[
       component: Dashboard,
       name: "Dashboard Screen",
       protected: true,
-    },
-    // {
-    //   path: "/profile",
-    //   component: Profile,
-    //   name: "Profile Screen",
-    //   protected: true,
-    // },
+    }
   ];
   
   export default routes

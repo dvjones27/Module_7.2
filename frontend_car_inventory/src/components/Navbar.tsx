@@ -42,7 +42,7 @@ const clicked = () => {
         <Button 
         onClick={dropDown}
         className="flex  items-center px-3 py-2 text-white-700 border rounded border-white-300 hover:text-white hover:border-red">
-            <i className="fa-light fa-bars text-white"  />
+            <i className="fa-regular fa-car text-white" ></i>
         </Button>
         
     </div>
@@ -51,17 +51,19 @@ const clicked = () => {
                 <div className="text-sm lg:flex-grow">
                     <Button className="p-3 m-5  justify-center ">
                         <div>
-                            <Link to='/' onClick={ clicked } className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold
+                            <Link to='/' onClick={ clicked } className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold fa-xl
                             text-gray-900 hover:font-bold hover:text-black'>
-                                Home
+                                {/* Home */}
+                                <i className="fa-regular fa-md fa-house"></i>
                             </Link>
                         </div>
                     </Button>
                     <Button className="p-3 m-5  justify-center ">
                         <div>
-                            <Link to='/about' onClick={ clicked } className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold
+                            <Link to='/about' onClick={ clicked } className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold fa-xl
                             text-gray-900 hover:font-bold hover:text-black'>
-                                About
+                                {/* About */}
+                                <i className="fa-regular fa-circle-info"></i>
                             </Link>
                         </div>
                     </Button>
@@ -75,9 +77,10 @@ const clicked = () => {
                     </Button> */}
                     <Button className="p-3 m-5  justify-center ">
                         <div>
-                            <Link to='/dashboard' onClick={ clicked } className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold 
-                             text-gray-900 hover:font-bold hover:text-black'>
-                                Dashboard
+                            <Link to='/dashboard' onClick={ clicked } className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold fa-xl
+                            text-gray-900 hover:font-bold hover:text-black'>
+                                {/* Dashboard */}
+                                <i className="fa-regular fa-md fa-table-columns"></i>
                             </Link>
                         </div>
                     </Button>
@@ -86,18 +89,22 @@ const clicked = () => {
 
                         <Button className="p-3 m-5  justify-center ">
                             <div>
-                                <Link to="/" onClick={ () => { signInOnClick()}} className="flex place-items-center m-1
-                                 lg:inline-block lg:mt-0 text-center text-semibold text-gray-900 hover:font-bold hover:text-black">
-                                    Login
+                                <Link to="/" onClick={ () => { signInOnClick()}} 
+                                className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold fa-xl
+                                text-gray-900 hover:font-bold hover:text-black'>
+                                    {/* Login */}
+                                    <i className="fa-solid fa-md fa-person-circle-check"></i>
                                 </Link>
                             </div>
                         </Button>
                         :
                         <Button className="p-3 m-5  justify-center">
                             <div>
-                                <Link to="/" onClick={ () => { signOutOnClick()}} className="flex place-items-center m-1
-                                 lg:inline-block text-semibold text-center lg:mt-0 text-gray-900 hover:text-black">
-                                    Log Out
+                                <Link to="/" onClick={ () => { signOutOnClick()}} 
+                                className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold fa-xl
+                                text-gray-900 hover:font-bold hover:text-black'>
+                                    {/* Log Out */}
+                                    <i className="fa-solid fa-person-circle-xmark"></i>
                                 </Link>
                             </div>
                         </Button>

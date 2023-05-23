@@ -15,7 +15,7 @@ export const server_calls = {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': `Bearer ${token}`,
+                // 'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             },
         });
@@ -33,7 +33,7 @@ export const server_calls = {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': `Bearer ${token}`,
+                // 'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(data)
@@ -52,7 +52,7 @@ export const server_calls = {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': `Bearer ${token}`,
+                // 'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(data)
@@ -71,7 +71,7 @@ export const server_calls = {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
-                'x-access-token': `Bearer ${token}`,
+                // 'x-access-token': `Bearer ${token}`,
                 'Access-Control-Allow-Origin': '*',
             }
         })

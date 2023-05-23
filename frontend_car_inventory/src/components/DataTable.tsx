@@ -3,11 +3,7 @@ import Button from './Button'
 import Modal from './Modal'
 import { server_calls } from '../api/server';
 import { DataGrid, GridColDef} from '@mui/x-data-grid';
-// import Box from '@mui/material/Box';
-
-
 import { useGetData } from '../custom-hooks/FetchData';
-import { Box, Typography } from '@mui/material';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: "ID", width: 90, hideable: true },
@@ -63,26 +59,16 @@ function DataTable() {
           style={{ height: 500, width: '100%' }}
           >
             <h2 className="flex p-3 bg-slate-300 justify-items-center items-center h-auto w-auto  my-2 rounded">My Cars</h2>
-            {/* <Box  
-            sx={{
-              boxShadow: 2,
-              border: 2,
-              borderColor: 'primary.light',
-              '& .MuiDataGrid-cell:hover': {
-                color: 'primary.main',
-              },
-            }} */}
-            {/* > */}
-            <DataGrid autoHeight {...carData}
+            <DataGrid 
+              // autoHeight {...carData}
               rows={carData} 
               columns={columns}  
               checkboxSelection={true}
-              getRowId={(row) => row.id + row.vin}
+              // getRowId={(row) => row.id + row.vin}
               onRowSelectionModelChange={ (item:any) => {setSelectionModel(item)
               }}
             />
-            
-            {/* </Box> */}
+          
         </div>
     </>
   )
