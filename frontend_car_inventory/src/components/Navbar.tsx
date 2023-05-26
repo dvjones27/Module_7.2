@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button'
-import { signInWithPopup, signOut } from 'firebase/auth'
+import { getAuth, signInWithPopup, signOut,  } from 'firebase/auth'
 import { auth, Providers } from '../config/firebase'
 import Background from '../assets/images/peter-broomfield-m3m-lnR90uM-unsplash.jpg'
+import GoogleButton from 'react-google-button';
 
 function Navbar() {
   const [isVisible, setIsVisible] =useState(false);
@@ -13,14 +14,17 @@ function Navbar() {
     signOut(auth)
     location.reload();
   }
-
-  const signInOnClick = async () => {
-    const response = await signInWithPopup(auth, Providers.google);
-    if ( response.user ) {
-        location.reload();
-    }
-  }
   
+  const sendSignInLinkToEmail = async () => {
+    const response = await sendSignInLinkToEmail()
+  }
+ 
+
+  
+  const signInOnClick = async () => {
+    const response = await signInWithPopup(auth, 
+        Providers.google, )
+  }
 
 const dropDown = () => {
   setIsVisible(!isVisible)
@@ -29,6 +33,8 @@ const dropDown = () => {
 const clicked = () => {
   setIsVisible(false)
 }
+
+
   
   return (
     <nav 
@@ -81,6 +87,7 @@ const clicked = () => {
                             text-gray-900 hover:font-bold hover:text-black'>
                                 {/* Dashboard */}
                                 <i className="fa-regular fa-md fa-table-columns"></i>
+                                {/* <GoogleButton /> */}
                             </Link>
                         </div>
                     </Button>
@@ -89,7 +96,11 @@ const clicked = () => {
 
                         <Button className="p-3 m-5  justify-center ">
                             <div>
-                                <Link to="/" onClick={ () => { signInOnClick()}} 
+                                {/* <Link to='/' onClick={ clicked }  */}
+                                <Link to="/" onClick={ () => { signInOnClick(),
+                                sendSignInLinkToEmail()
+                                }} 
+                                
                                 className='flex place-items-center text-center m-1 lg:inline-block lg:mt-0 text-semibold fa-xl
                                 text-gray-900 hover:font-bold hover:text-black'>
                                     {/* Login */}
